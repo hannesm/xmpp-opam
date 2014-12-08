@@ -1,1 +1,1 @@
-git: "git://github.com/mirleft/ocaml-x509.git"
+git: "git://github.com/mirleft/ocaml-x509.git#fingerprints"
