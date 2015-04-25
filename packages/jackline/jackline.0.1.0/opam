@@ -21,15 +21,11 @@ remove: [
 depends: [
   "ocamlfind"
   "erm_xmpp" {>= "0.3"}
-<<<<<<< HEAD
   "tls" {>= "0.4.0"}
   "x509" {>= "0.3.0"}
-=======
-  "tls" {>= "0.2.1"}
-  "x509" {>= "0.2.1"}
->>>>>>> parent of 530cbf0... adjust deps, remove stuff now in a PR to opam
   "lwt"
-  "otr"
+  "otr" {> "0.1.0"}
+  "zed"
   "lambda-term"
   "react"
   "type_conv"
