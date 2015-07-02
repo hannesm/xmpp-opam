@@ -1,6 +1,5 @@
 opam-version: "1.2"
 name:         "otr"
-version:      "0.1.1"
 homepage:     "https://github.com/hannesm/ocaml-otr"
 dev-repo:     "https://github.com/hannesm/ocaml-otr.git"
 bug-reports:  "https://github.com/hannesm/ocaml-otr/issues"
@@ -20,7 +19,7 @@ depends: [
   "cstruct" {>= "1.6.0"}
   "type_conv"
   "sexplib"
-  "nocrypto" {>= "0.3.0"}
+  "nocrypto" {>= "0.5.0"}
   "stringext"
 ]
 available: [ ocaml-version >= "4.01.0" ]
