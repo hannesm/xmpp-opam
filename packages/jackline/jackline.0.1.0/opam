@@ -1,22 +1,17 @@
 opam-version: "1.2"
 name:         "jackline"
-version:      "0.1.0"
 homepage:     "https://github.com/hannesm/jackline"
 dev-repo:     "https://github.com/hannesm/jackline.git"
 bug-reports:  "https://github.com/hannesm/jackline/issues"
 author:       ["Hannes Mehnert <hannes@mehnert.org>"]
 maintainer:   ["Hannes Mehnert <hannes@mehnert.org>"]
-license:      "BSD2"
+license:      "proprietary"
 
 build: [
-  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
-  ["ocaml" "setup.ml" "-build"]
-]
-install: ["ocaml" "setup.ml" "-install"]
-remove: [
-  ["ocamlfind" "remove" "xmpp_client"]
-  ["ocamlfind" "remove" "xmpp_client_cli"]
-  ["rm" "-f" "%{bin}%/jackline"]
+  [ "ocaml" "pkg/git.ml" ]
+  [ "ocaml" "pkg/build.ml" "native=%{ocaml-native}%"
+                           "native-dynlink=%{ocaml-native-dynlink}%"
+                           "cmdliner=%{cmdliner:installed}%" ]
 ]
 depends: [
   "ocamlfind"
