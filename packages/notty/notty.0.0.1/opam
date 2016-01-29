@@ -1,0 +1,17 @@
+opam-version: "1.2"
+maintainer: "Hannes Mehnert"
+authors: "David"
+homepage: "http://127.1"
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "notty"]
+depends: [
+  "ocamlfind" {build}
+  "uutf"
+  "uuseg"
+  "uucp"
+]
+available: [ ocaml-version >= "4.02.0" ]
