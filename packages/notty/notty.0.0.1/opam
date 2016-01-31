@@ -1,22 +1,30 @@
 opam-version: "1.2"
-maintainer: "Hannes Mehnert"
-authors: "David"
-homepage: "http://127.1"
+homepage:     "https://github.com/pqwy/notty"
+dev-repo:     "https://github.com/pqwy/notty.git"
+bug-reports:  "https://github.com/pqwy/notty/issues"
+author:       "David Kaloper <david@numm.org>"
+maintainer:   "David Kaloper <david@numm.org>"
+license:      "BSD2"
+
 build: [
-  ["./configure" "--prefix" prefix
-   "--%{lwt:enable}%-lwt"
-   "--disable-tests" ]
-  [make]
+  [ "./configure" "--prefix" prefix
+    "--enable-unix"
+    "--%{lwt:enable}%-lwt" ]
+  [ make ]
 ]
-install: [make "install"]
-remove: ["ocamlfind" "remove" "notty"]
+install: [ make "install" ]
+remove:  [ "ocamlfind" "remove" "notty" ]
+
 depends: [
   "ocamlfind" {build}
-  "uutf"
-  "uuseg"
   "uucp"
+  "uuseg"
+  "uutf"
+  "rresult"
 ]
+
 depopts: [
   "lwt"
 ]
+
 available: [ ocaml-version >= "4.02.0" ]
