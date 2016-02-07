@@ -20,7 +20,7 @@ depends: [
   "uucp"
   "uuseg"
   "uutf"
-  "rresult"
+  "result"
 ]
 
 depopts: [
