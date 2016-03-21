@@ -12,6 +12,6 @@ remove: [["ocamlfind" "remove" "erm_xmpp"]]
 depends: [
   "ocamlfind"
   "erm_xml" {>= "0.3"}
-  "nocrypto"
+  "nocrypto" {>= "0.5.3"}
   "camlp4"
 ]
