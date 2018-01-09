@@ -10,7 +10,7 @@ build: [
 build-test: [["ocaml" "setup.ml" "-test"]]
 remove: [["ocamlfind" "remove" "erm_xmpp"]]
 depends: [
-  "ocamlfind"
+  "ocamlfind" {build}
   "ocamlbuild" {build}
   "erm_xml" {>= "0.3"}
   "nocrypto" {>= "0.5.3"}
