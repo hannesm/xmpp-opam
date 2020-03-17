@@ -7,8 +7,10 @@ depends: [
   "ocamlfind" {build}
   "ocamlbuild" {build}
   "erm_xml" {>= "0.3"}
-  "nocrypto" {>= "0.5.3"}
   "camlp4"
+  "mirage-crypto"
+  "mirage-crypto-rng"
+  "base64" {>= "3.0.0"}
 ]
 flags: light-uninstall
 build: [
